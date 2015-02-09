@@ -5,9 +5,8 @@ using System.Collections;
 //	２形態？
 //	１形態目100expで２形態目は200expとかでいいかな
 
-//	
-
-
+//	プレイヤーにコンポーネントする
+//	アイテムにぶつかったらexpをGetするようにする
 
 public class exp : MonoBehaviour {
 
@@ -20,4 +19,10 @@ public class exp : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void OnTriggerEnter2D(Collider2D coll)
+	{
+
+	}
+
 }
