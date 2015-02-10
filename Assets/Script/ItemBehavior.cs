@@ -8,6 +8,8 @@ using System.Collections;
 
 //	アイテムの判定用にマウスカーソル的なのを作る
 
+//	形態に寄ってアイテム画像が替わる
+
 public class ItemBehavior : MonoBehaviour {
 
 	// Use this for initialization
@@ -27,7 +29,12 @@ public class ItemBehavior : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
+		if(coll.gameObject.tag == "Mouse")
+		{
+			//	指で持っていった場所に移動する
 
+
+		}
 	}
 
 }
