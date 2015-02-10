@@ -48,9 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Editor\AlphaNumericSort.cs" />
      <Compile Include="Assets\Scripts\Editor\GUIHierarchy.cs" />
-     <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
      <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
-     <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
