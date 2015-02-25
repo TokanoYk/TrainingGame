@@ -49,6 +49,7 @@
      <Compile Include="Assets\Script\FormChange.cs" />
      <Compile Include="Assets\Script\ItemBehavior.cs" />
      <Compile Include="Assets\Script\ItemRespawn.cs" />
+     <Compile Include="Assets\Script\MouseMove.cs" />
      <Compile Include="Assets\Script\Move.cs" />
      <Compile Include="Assets\Script\Wall.cs" />
      <Compile Include="Assets\Script\exp.cs" />
