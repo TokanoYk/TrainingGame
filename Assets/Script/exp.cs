@@ -16,17 +16,21 @@ public class exp : MonoBehaviour {
 
 	//	形態ごとのExpの量
 	public int firstMax = 100;
-	public int secondMax = 100;
-	public int thirdMax = 100;
+	public int secondMax = 200;
+	public int thirdMax = 300;
+	
 
 	private FormChange _player;
 	public GameObject playerObject;
 
+	private ExpImage _exp;
+	public GameObject expObject;
 
 	// Use this for initialization
 	void Start ()
 	{
 		_player = playerObject.GetComponent<FormChange> ();
+		_exp = expObject.GetComponent<ExpImage> ();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +45,7 @@ public class exp : MonoBehaviour {
 		{
 			//	Expゲットの処理
 			GetExp();
+			_exp.DecreaseGauge();
 		}
 	}
 
@@ -48,9 +53,11 @@ public class exp : MonoBehaviour {
 	{
 		if(_player.firstForm)
 		{
+			//	経験値の引き算
 			firstMax -= expVolume;
 			if(firstMax <= 0)
 			{
+				//	フォルムチェンジの処理
 				_player.firstForm = false;
 				_player.secondForm = true;
 			}
