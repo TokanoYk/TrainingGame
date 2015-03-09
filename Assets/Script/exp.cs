@@ -12,7 +12,9 @@ using System.Collections;
 public class exp : MonoBehaviour {
 
 	//	手に入れるexp
-	public int expVolume = 3;
+	public int form1_exp = 3;
+	public int form2_exp = 2;
+	public int form3_exp = 1;
 
 	//	形態ごとのExpの量
 	public int firstMax = 100;
@@ -25,6 +27,10 @@ public class exp : MonoBehaviour {
 
 	private ExpImage _exp;
 	public GameObject expObject;
+
+	/// <summary>変身中は動かない</summary>
+	//public bool ChangeForm = false;
+
 
 	// Use this for initialization
 	void Start ()
@@ -54,20 +60,26 @@ public class exp : MonoBehaviour {
 		if(_player.firstForm)
 		{
 			//	経験値の引き算
-			firstMax -= expVolume;
+			firstMax -= form1_exp;
 			if(firstMax <= 0)
 			{
+				Debug.Log("Form1Change");
 				//	フォルムチェンジの処理
 				_player.firstForm = false;
 				_player.secondForm = true;
+
+				//	アニメーションで画面真ん中に移動
+				//ChangeForm = true;
+				//GetComponent<Animator>().SetBool("Form",ChangeForm);
 			}
 		}
 
 		if(_player.secondForm)
 		{
-			secondMax -= expVolume;
+			secondMax -= form2_exp;
 			if(secondMax <= 0)
 			{
+				Debug.Log("Form2Change");
 				_player.secondForm = false;
 				_player.thirdForm = true;
 			}
@@ -75,15 +87,20 @@ public class exp : MonoBehaviour {
 
 		if(_player.thirdForm)
 		{
-			thirdMax -= expVolume;
+			thirdMax -= form3_exp;
 			if(thirdMax <= 0)
 			{
+				Debug.Log("Form3Change");
 				_player.thirdForm = false;
 			}
 		}
 
 	}
 
+	//void FormReset()
+	//{
+	//	ChangeForm = false;
+	//}
 
 
 }

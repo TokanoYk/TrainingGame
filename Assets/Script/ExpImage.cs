@@ -33,11 +33,15 @@ public class ExpImage : MonoBehaviour {
 	/// <summary>ゲージの減少を管理する関数</summary>
 	public void DecreaseGauge()
 	{
-		_image.fillAmount -= 0.03f;
+		if(_player.firstForm)
+		{
+			_image.fillAmount -= 0.03f;
+		}
 
 		//	形態変化したらまたゲージを元に戻す
 		if(_player.secondForm)
 		{
+			_image.fillAmount -= 0.02f;
 			if(SecondFormGauge)
 			{
 				//	ゲージをMAXに戻す
@@ -48,6 +52,7 @@ public class ExpImage : MonoBehaviour {
 
 		if(_player.thirdForm)
 		{
+			_image.fillAmount -= 0.01f;
 			if(ThirdFormGauge)
 			{
 				_image.fillAmount = 1f;
