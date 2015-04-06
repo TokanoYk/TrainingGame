@@ -58,8 +58,6 @@ public class ItemRespawn : MonoBehaviour {
 		{
 			instant_Object = (GameObject) Instantiate(ItemObject,new Vector2(transform.position.x,transform.position.y), Quaternion.identity);
 			//	子オブジェクトとして生成
-
-
 			Respawn = false;
 		}
 	}

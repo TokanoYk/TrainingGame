@@ -21,7 +21,7 @@ public class exp : MonoBehaviour {
 	public int secondMax = 200;
 	public int thirdMax = 300;
 	
-
+	//	取得用
 	private FormChange _player;
 	public GameObject playerObject;
 
@@ -29,7 +29,12 @@ public class exp : MonoBehaviour {
 	public GameObject expObject;
 
 	/// <summary>変身中は動かない</summary>
-	//public bool ChangeForm = false;
+	public bool ChangeForm = false;
+
+	//	キャラクター変更のアニメーション用判定
+	public bool firstFormAnimation = true;
+	public bool secondFormAnimation = false;
+	public bool thirdFormAnimation = false;
 
 
 	// Use this for initialization
@@ -68,9 +73,13 @@ public class exp : MonoBehaviour {
 				_player.firstForm = false;
 				_player.secondForm = true;
 
+				//	アニメーションの切り替え
+				firstFormAnimation = false;
+				secondFormAnimation = true;
+
 				//	アニメーションで画面真ん中に移動
-				//ChangeForm = true;
-				//GetComponent<Animator>().SetBool("Form",ChangeForm);
+				ChangeForm = true;
+				GetComponent<Animator>().SetBool("Change",ChangeForm);
 			}
 		}
 
@@ -80,8 +89,15 @@ public class exp : MonoBehaviour {
 			if(secondMax <= 0)
 			{
 				Debug.Log("Form2Change");
+			
 				_player.secondForm = false;
 				_player.thirdForm = true;
+
+				secondFormAnimation = false;
+				thirdFormAnimation = true;
+
+				ChangeForm = true;
+				GetComponent<Animator>().SetBool("Change",ChangeForm);
 			}
 		}
 
@@ -92,15 +108,19 @@ public class exp : MonoBehaviour {
 			{
 				Debug.Log("Form3Change");
 				_player.thirdForm = false;
+
+				ChangeForm = true;
+				GetComponent<Animator>().SetBool("Change",ChangeForm);
 			}
 		}
 
 	}
 
-	//void FormReset()
-	//{
-	//	ChangeForm = false;
-	//}
+	void FormReset()
+	{
+		ChangeForm = false;
+		GetComponent<Animator>().SetBool("Change",ChangeForm);
+	}
 
 
 }

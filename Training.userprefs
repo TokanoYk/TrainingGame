@@ -1,8 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Adventure\TextMana.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Training\exp.cs">
     <Files>
-      <File FileName="Assets\Script\Adventure\TextMana.cs" Line="135" Column="23" />
+      <File FileName="Assets\Script\Training\FormChange.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Adventure\TextMana.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Training\exp.cs" Line="122" Column="57" />
+      <File FileName="Assets\Script\Training\ExpImage.cs" Line="36" Column="20" />
+      <File FileName="Assets\Script\Training\Move.cs" Line="22" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

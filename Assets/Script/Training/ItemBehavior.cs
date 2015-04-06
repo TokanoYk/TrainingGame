@@ -18,10 +18,15 @@ public class ItemBehavior : MonoBehaviour {
 	public GameObject AriaObject;
 	private ItemRespawn _item;
 
+	private MouseMove _mouse;
+	public GameObject mouseObject;
+
 	// Use this for initialization
 	void Start () {
 		_item = AriaObject.GetComponent<ItemRespawn> ();
 
+		
+		_mouse = mouseObject.GetComponent<MouseMove> ();
 		//Exist = true;
 	}
 	
@@ -35,10 +40,13 @@ public class ItemBehavior : MonoBehaviour {
 		//	プレイヤーと衝突したら
 		if(coll.gameObject.tag == "Player")
 		{
-			//Exist = false;
-			//	指で持っていった場所に移動する
-			Invoke("DeleteObject",0.5f);
-
+			//	マウスで持っていたら
+			//if(_mouse.OnClick)
+			//{
+				//Exist = false;
+				//	指で持っていった場所に移動する
+				Invoke("DeleteObject",0.5f);
+			//}
 		}
 	}
 

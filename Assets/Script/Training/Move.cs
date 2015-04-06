@@ -14,9 +14,7 @@ public class Move : MonoBehaviour {
 	//	ランダムで方向を切り替えるための変数
 	[SerializeField]
 	public int direction;
-
-
-
+	
 	[SerializeField]
 	//	タイマー
 	private float timer = 4.0f;
@@ -98,9 +96,13 @@ public class Move : MonoBehaviour {
 			newPosition.x -= moveSpeed * Time.deltaTime;
 			newPosition.y += moveSpeed * Time.deltaTime;
 			break;
+
+		case 8:
+			//	その場で停止
+			break;
 		}
 
-		//	移動後のポジション７書き換え
+		//	移動後のポジション書き換え
 		transform.position = newPosition;
 	}
 
@@ -137,14 +139,5 @@ public class Move : MonoBehaviour {
 		{
 			direction = 0;
 		}
-
-		//	右上
-		
-		//	右下
-		
-		//	左上
-		
-		//	左下
-		
 	}
 }

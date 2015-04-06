@@ -48,14 +48,14 @@
   <ItemGroup>
      <Compile Include="Assets\Script\Adventure\TextMana.cs" />
      <Compile Include="Assets\Script\EscEnd.cs" />
-     <Compile Include="Assets\Script\ExpImage.cs" />
-     <Compile Include="Assets\Script\FormChange.cs" />
-     <Compile Include="Assets\Script\ItemBehavior.cs" />
-     <Compile Include="Assets\Script\ItemRespawn.cs" />
-     <Compile Include="Assets\Script\MouseMove.cs" />
-     <Compile Include="Assets\Script\Move.cs" />
-     <Compile Include="Assets\Script\Wall.cs" />
-     <Compile Include="Assets\Script\exp.cs" />
+     <Compile Include="Assets\Script\Training\ExpImage.cs" />
+     <Compile Include="Assets\Script\Training\FormChange.cs" />
+     <Compile Include="Assets\Script\Training\ItemBehavior.cs" />
+     <Compile Include="Assets\Script\Training\ItemRespawn.cs" />
+     <Compile Include="Assets\Script\Training\MouseMove.cs" />
+     <Compile Include="Assets\Script\Training\Move.cs" />
+     <Compile Include="Assets\Script\Training\Wall.cs" />
+     <Compile Include="Assets\Script\Training\exp.cs" />
      <None Include="Assets\Script\Adventure\Scenario\FirstStory.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
